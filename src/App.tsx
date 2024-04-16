@@ -3,6 +3,7 @@ import { ThemeProvider } from './components/theme-provider'
 import MainApp from './pages/app'
 import Nav from './components/layout/nav'
 import { Header } from './components/layout/header/header'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const queryClient = new QueryClient()
@@ -12,6 +13,7 @@ function App() {
         <Nav />
         <Header />
         <MainApp />
+        <Analytics />
       </QueryClientProvider>
     </ThemeProvider>
   )
