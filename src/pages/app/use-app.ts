@@ -5,8 +5,8 @@ export const useGetBtcBlockInfo = () => {
   return useQuery({
     queryKey: ['btc-block-info'],
     queryFn: () => fetchBtcLatestBlockApi(),
-    retryOnMount: true,
-    refetchInterval: 10000,
+    retryOnMount: false,
+    refetchInterval: 60000,
   })
 }
 
