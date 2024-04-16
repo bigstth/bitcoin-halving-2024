@@ -72,8 +72,8 @@ const MainApp = () => {
       <div className="grid grid-cols-1 justify-center text-center">
         <p>
           Blockchain data:{' '}
-          <a href="https://blockchain.info" target="_blank">
-            https://blockchain.info
+          <a href="https://blastapi.io" target="_blank">
+            https://blastapi.io
           </a>
         </p>
         <p>
