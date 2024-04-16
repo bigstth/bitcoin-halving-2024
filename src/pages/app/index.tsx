@@ -62,6 +62,9 @@ const MainApp = () => {
                 </div>
               )
             }}
+            onComplete={() => {
+              window.location.href = 'https://youtu.be/_PXU0thDHCU?si=ol7krSAZqNg2WfJD'
+            }}
           />
         )}
 
