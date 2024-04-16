@@ -1,3 +1,4 @@
+import { numberWithCommas } from '@/lib/utils'
 import { Badge } from '../ui/badge'
 import { Progress } from '../ui/progress'
 
@@ -11,7 +12,7 @@ const BlockProgress = ({ height, halvingBlock }: { height: number; halvingBlock:
     <div className="flex flex-col items-end gap-2">
       <Badge variant="outline">
         <p>
-          จำนวนบล็อค: {height} / {halvingBlock}
+          จำนวนบล็อค: {numberWithCommas(height)} / {numberWithCommas(halvingBlock)}
         </p>
       </Badge>
       <Progress value={calculateProgress()} />

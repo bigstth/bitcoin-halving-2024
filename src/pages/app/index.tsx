@@ -33,7 +33,7 @@ const MainApp = () => {
     },
     {
       title: 'ราคาปัจจุบัน',
-      description: numberWithCommas(btcPrice || 0),
+      description: numberWithCommas(btcPrice),
       icon: <Bitcoin width={64} height={64} />,
     },
   ]
