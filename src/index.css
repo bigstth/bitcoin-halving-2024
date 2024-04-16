@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(to top left, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    --background: 230 99.2% 98.24%;
+    --foreground: 230 8.4% 0.48%;
+
+    --muted: 230 8.4% 91.2%;
+    --muted-foreground: 230 4.2% 41.2%;
+
+    --popover: 230 22.799999999999997% 91.2%;
+    --popover-foreground: 230 8.4% 0.6%;
+
+    --card: 230 22.799999999999997% 91.2%;
+    --card-foreground: 230 8.4% 0.6%;
+
+    --border: 230 13.4% 89.48%;
+    --input: 230 13.4% 89.48%;
+
+    --primary: 169 100% 48%;
+    --primary-foreground: 169 10% 4.8%;
+
+    --secondary: 230 4.2% 95.6%;
+    --secondary-foreground: 230 6.04% 11.2%;
+
+    --accent: 230 4.2% 95.6%;
+    --accent-foreground: 230 6.04% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 230 84% 12%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(to top left, #00f5a0, #00d9f5);
+
+    --background: 169 65% 3.84%;
+    --foreground: 169 10% 97.4%;
+
+    --muted: 169 50% 14.399999999999999%;
+    --muted-foreground: 169 10% 54.8%;
+
+    --popover: 169 45% 6.24%;
+    --popover-foreground: 169 10% 97.4%;
+
+    --card: 169 45% 6.24%;
+    --card-foreground: 169 10% 97.4%;
+
+    --border: 169 50% 14.399999999999999%;
+    --input: 169 50% 14.399999999999999%;
+
+    --primary: 169 100% 48%;
+    --primary-foreground: 169 10% 4.8%;
+
+    --secondary: 169 50% 14.399999999999999%;
+    --secondary-foreground: 169 10% 97.4%;
+
+    --accent: 169 50% 14.399999999999999%;
+    --accent-foreground: 169 10% 97.4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 169 10% 97.4%;
+
+    --ring: 169 100% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-family: 'Prompt', system-ui, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  @font-face {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/assets/Prompt-Regular.ttf) format('woff2');
+  }
+}
+
+* {
+  .\[\&\.active\]\:bg-gradient.active {
+    background: var(--gradient);
+  }
+}
