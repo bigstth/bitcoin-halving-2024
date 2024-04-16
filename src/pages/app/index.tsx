@@ -15,14 +15,15 @@ const MainApp = () => {
   const [halvingDate, setHalvingDate] = useState('')
   const { data } = useGetBtcBlockInfo()
   const { data: coinList } = useGetCoinList()
-  const btcPrice = coinList?.find((item: any) => item.symbol === 'btc_thb')?.lastPrice || 0
 
-  const remainBlocks = HALVING_BLOCK - data?.height || 0
+  const blockHeight = data?.blocks || 0
+  const btcPrice = coinList?.find((item: any) => item.symbol === 'btc_thb')?.lastPrice || 0
+  const remainBlocks = HALVING_BLOCK - blockHeight
 
   const infoCardItems = [
     {
       title: 'จำนวนบล็อกปัจจุบัน',
-      description: numberWithCommas(data?.height || 0),
+      description: numberWithCommas(blockHeight),
       icon: <PackageOpen width={64} height={64} className="text-foreground" />,
     },
     {
@@ -38,7 +39,7 @@ const MainApp = () => {
   ]
 
   useEffect(() => {
-    if (data?.height) {
+    if (blockHeight) {
       const calculatedHalvingDate = dayjs()
         .add(remainBlocks * TIME_PER_BLOCK_IN_SECOND, 'second')
         .toISOString()
@@ -64,7 +65,7 @@ const MainApp = () => {
           />
         )}
 
-        <BlockProgress height={data?.height} halvingBlock={HALVING_BLOCK} />
+        <BlockProgress height={blockHeight} halvingBlock={HALVING_BLOCK} />
 
         <InfoCards items={infoCardItems} />
       </div>
