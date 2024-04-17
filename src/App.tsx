@@ -4,6 +4,7 @@ import MainApp from './pages/app'
 import Nav from './components/layout/nav'
 import { Header } from './components/layout/header/header'
 import { Analytics } from '@vercel/analytics/react'
+import { Toaster } from 'sonner'
 
 function App() {
   const queryClient = new QueryClient()
@@ -13,6 +14,7 @@ function App() {
         <Nav />
         <Header />
         <MainApp />
+        <Toaster position="top-right" richColors />
         <Analytics />
       </QueryClientProvider>
     </ThemeProvider>
