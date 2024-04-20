@@ -41,7 +41,7 @@ const MainApp = () => {
   useEffect(() => {
     if (blockHeight) {
       const calculatedHalvingDate = dayjs()
-        .add(remainBlocks * TIME_PER_BLOCK_IN_SECOND, 'second')
+        .subtract(remainBlocks * TIME_PER_BLOCK_IN_SECOND, 'second')
         .toISOString()
 
       setHalvingDate(calculatedHalvingDate)
@@ -62,9 +62,6 @@ const MainApp = () => {
                 </div>
               )
             }}
-            onComplete={() => {
-              window.location.href = 'https://youtu.be/_PXU0thDHCU?si=ol7krSAZqNg2WfJD'
-            }}
           />
         )}
 
@@ -72,6 +69,7 @@ const MainApp = () => {
 
         <InfoCards items={infoCardItems} />
       </div>
+
       <div className="grid grid-cols-1 justify-center text-center">
         <p>
           Blockchain data:{' '}
