@@ -19,7 +19,7 @@ const Nav = () => {
       >
         {theme === 'light' ? <Sun /> : <Moon />}
       </Button>
-      <Button size="icon" variant="ghost" onClick={() => window.open('https://github.com/bigstth/bitcoin-halving-2024', '_blank')}>
+      <Button size="icon" variant="ghost" onClick={() => window.open('https://github.com/bigstth/bitcoin-halving-2028', '_blank')}>
         <Github />
       </Button>
     </div>

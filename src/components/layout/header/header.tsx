@@ -18,7 +18,7 @@ export function Header() {
       >
         <div className="text-lg md:text-3xl font-bold text-white text-center flex flex-nowrap gap-4 items-center">
           <img src={Btc} alt="bitcoin" className="max-w-[48px] md:max-w-[64px]" />
-          Bitcoin Halving Countdown 2024
+          Bitcoin Halving Countdown 2028
         </div>
 
         <Button className="bg-primary rounded-full w-fit text-primary-foreground dark:text-black px-4 py-2" onClick={() => window.open('https://www.orbixtrade.com/th/blog/article/bitcoin-halving-bitcoin', '_blank')}>

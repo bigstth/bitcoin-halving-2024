@@ -7,7 +7,7 @@ import Countdown from 'react-countdown'
 import dayjs from 'dayjs'
 import BlockProgress from '@/components/block-progress'
 
-const HALVING_BLOCK = 840000
+const HALVING_BLOCK = 1050000
 const TIME_PER_BLOCK_IN_SECOND = 567
 //time per block reference from https://www.coinwarz.com/bitcoin-halving
 
@@ -41,12 +41,12 @@ const MainApp = () => {
   useEffect(() => {
     if (blockHeight) {
       const calculatedHalvingDate = dayjs()
-        .subtract(remainBlocks * TIME_PER_BLOCK_IN_SECOND, 'second')
+        .add(remainBlocks * TIME_PER_BLOCK_IN_SECOND, 'second')
         .toISOString()
 
       setHalvingDate(calculatedHalvingDate)
     }
-  }, [data])
+  }, [data?.blocks])
 
   return (
     <div className="container px-5 md:px-20">
